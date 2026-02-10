@@ -17,6 +17,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${mono.variable} ${sans.variable}`}>
+      <head>
+        <script src="https://cdn.usefathom.com/script.js" data-site="JCWQDOLY" defer></script>
+      </head>
       <body className="bg-gray-950 text-gray-100 font-sans min-h-screen">
         <nav className="border-b border-gray-800 px-6 py-4">
           <div className="max-w-5xl mx-auto flex items-center justify-between">
