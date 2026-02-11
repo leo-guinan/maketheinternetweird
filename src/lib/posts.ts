@@ -29,7 +29,7 @@ export function getAllPosts(): Post[] {
     return {
       slug,
       title: data.title,
-      date: data.date,
+      date: data.date instanceof Date ? data.date.toISOString().split('T')[0] : String(data.date),
       weirdnessScore: data.weirdnessScore,
       attentionRating: data.attentionRating,
       tags: data.tags || [],
@@ -51,7 +51,7 @@ export function getPostBySlug(slug: string): Post | undefined {
   return {
     slug,
     title: data.title,
-    date: data.date,
+    date: data.date instanceof Date ? data.date.toISOString().split('T')[0] : String(data.date),
     weirdnessScore: data.weirdnessScore,
     attentionRating: data.attentionRating,
     tags: data.tags || [],
